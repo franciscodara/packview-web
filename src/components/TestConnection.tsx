@@ -31,7 +31,7 @@ export function TestConnection() {
 
     // Teste 2: Conexão com Supabase
     try {
-      const { data, error } = await supabase.auth.getSession();
+      const { error } = await supabase.auth.getSession();
       if (error) throw error;
       testResults.push({ 
         status: 'success', 
